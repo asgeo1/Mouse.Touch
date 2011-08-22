@@ -1,0 +1,7 @@
+A bridge between touch events and jquery draggable, 
+sortable etc. mouse interactions.
+@author Oleg Slobodskoi  
+
+modified by John Hardy (@jhlagado) to use with any touch device
+fixed breakage caused by jquery.ui so that MouseHandled internal flag is reset 
+before each touchStart event
