@@ -3,13 +3,21 @@
  *
  * A bridge between touch events and jquery draggable, 
  * sortable etc. mouse interactions.
+ * 
  * @author Oleg Slobodskoi https://github.com/kof/labs 
  * 
  * modified by John Hardy (@jhlagado) to use with any touch device
  * fixed breakage caused by jquery.ui so that MouseHandled internal flag is reset 
  * before each touchStart event
  * 
+ * Copyright 2011, Oleg Slobodskoi and John Hardy
+ * 
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * 
+ * http://jquery.org/license
+ * 
  */
+
 (function( $ ) {
     
     $.support.touch = typeof Touch === 'object';
