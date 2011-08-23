@@ -1,5 +1,6 @@
 /*
  * Content-Type:text/javascript
+ * https://github.com/jhlagado/Mouse.Touch 
  *
  * A bridge between touch events and jquery draggable, 
  * sortable etc. mouse interactions.
@@ -37,7 +38,7 @@
         },
         
         _touchStart: function( event ) {
-            if ( event.originalEvent.targetTouches.length != 1 ) {
+            if ( event.originalEvent.touches.length != 1 ) {
                 return false;
             }
     
