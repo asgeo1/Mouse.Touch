@@ -1,17 +1,16 @@
 /*
  * Content-Type:text/javascript
- * https://github.com/jhlagado/Mouse.Touch 
- *
+ * 
  * A bridge between touch events and jquery draggable, 
  * sortable etc. mouse interactions.
+ *
+ * @author Oleg Slobodskoi @oleg008 https://github.com/kof/labs 
+ * @author John Hardy @jhlagado https://github.com/jhlagado/Mouse.Touch
  * 
- * @author Oleg Slobodskoi https://github.com/kof/labs 
+ * Modifications by John Hardy (@jhlagado) 
  * 
- * modified by John Hardy (@jhlagado) to use with any touch device
- * fixed breakage caused by jquery.ui so that MouseHandled internal flag is reset 
- * before each touchStart event
- * 
- * Copyright 2011, Oleg Slobodskoi and John Hardy
+ * Copyright 2010, Oleg Slobodskoi 
+ * Copyright 2011, John Hardy, Lagado, lagado.com
  * 
  * Dual licensed under the MIT or GPL Version 2 licenses.
  * 

@@ -2,6 +2,15 @@ A bridge between touch events and jquery draggable,
 sortable etc. mouse interactions.
 @author Oleg Slobodskoi https://github.com/kof/labs 
 
-modified by John Hardy (@jhlagado) to use with any touch device
+Modified and maintained by John Hardy (@jhlagado) https://profiles.google.com/jhlagado
+
+2011-08-24
+
+removed agent string sniffing. Now works with any touch device, not just iOS ones
+
 fixed breakage caused by jquery.ui so that MouseHandled internal flag is reset 
 before each touchStart event
+
+fixed multi-touch problem. Now correctly cancels a _touchStart if more than one 
+finger is down (this is important becuase JQuery UI makes assumptions about 
+certain things happening in the right order)
