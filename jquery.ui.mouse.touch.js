@@ -37,7 +37,7 @@
         },
         
         _touchStart: function( event ) {
-            if ( event.originalEvent.touches.length != 1 ) {
+            if ( typeof event.originalEvent !== 'undefined' && event.originalEvent.touches.length != 1 ) {
                 return false;
             }
     
@@ -67,9 +67,11 @@
         
         _modifyEvent: function( event ) {
             event.which = 1;
-            var target = event.originalEvent.targetTouches[0];
-            event.pageX = target.clientX;
-            event.pageY = target.clientY;
+            if( typeof event.originalEvent !== 'undefined' ){
+                var target = event.originalEvent.targetTouches[0];
+                event.pageX = target.clientX;
+                event.pageY = target.clientY;
+            }
         }
         
     });
