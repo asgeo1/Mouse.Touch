@@ -27,7 +27,9 @@
     }
 
     var proto =  $.ui.mouse.prototype,
-    _mouseInit = proto._mouseInit;
+    _mouseInit = proto._mouseInit,
+    _mouseMoveDelegate = proto._mouseMoveDelegate,
+    _mouseUpDelegate = proto._mouseUpDelegate;
     
     $.extend( proto, {
         _mouseInit: function() {
@@ -49,6 +51,10 @@
 
             $( document ).trigger($.Event("mouseup")); //reset mouseHandled flag in ui.mouse
             this._mouseDown( event );
+
+            $( document )
+            .unbind( "mousemove." + this.widgetName, _mouseMoveDelegate )
+            .unbind( "mouseup." + this.widgetName, _mouseUpDelegate );
         },
         
         _touchMove: function( event ) {
